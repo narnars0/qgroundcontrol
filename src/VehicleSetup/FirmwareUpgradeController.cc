@@ -102,7 +102,7 @@ void FirmwareUpgradeController::_foundBoard(bool firstTry, const QString portNam
 /// @brief Begins the findBootloader process to connect to the bootloader
 void FirmwareUpgradeController::_findBootloader(void)
 {
-    _appendStatusLog(tr("Attemping to communicate with bootloader..."));
+    _appendStatusLog(tr("Attemtping to communicate with bootloader..."));
     _searchingForBoard = false;
     _threadController->findBootloader(_portName, _findBootloaderTimeoutMsec);
 }
@@ -192,7 +192,7 @@ void FirmwareUpgradeController::_getFirmwareFile(void)
     }
 
     if (prgFirmware == NULL && _firmwareType != CustomFirmware) {
-            QGCMessageBox::critical(tr("Firmware Upgrade"), tr("Attemping to flash an unknown board type, you must select 'Custom firmware file'"));
+            QGCMessageBox::critical(tr("Firmware Upgrade"), tr("Attemtping to flash an unknown board type, you must select 'Custom firmware file'"));
             _cancel();
             return;
     }
